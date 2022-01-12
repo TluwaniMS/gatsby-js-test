@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../layout-component/Layout";
 
 const MunicipalitiesView = () => {
   return (
-    <main>
-      <h1>Doctors View Works!!1</h1>
-    </main>
+    <Layout pageTitle="Municipalities">
+      <h1>Municipalities View Works!!1</h1>
+    </Layout>
   );
 };
 
