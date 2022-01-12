@@ -1,3 +1,13 @@
 import { graphql } from "gatsby";
 
-const GET_ALL_DOCTORS = graphql``;
+export const GET_ALL_DOCTORS = graphql`
+  query {
+    doctors_directory {
+      getAllDoctors {
+        id
+        firstName
+        lastName
+      }
+    }
+  }
+`;
