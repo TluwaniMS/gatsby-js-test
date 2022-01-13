@@ -16,10 +16,9 @@ const Doctors = () => {
     }
   `);
 
-  console.log(doctorsData);
   return (
     <Layout pageTitle="Doctors">
-      <DoctorsView />
+      <DoctorsView doctors={doctorsData.doctors_directory.getAllDoctors} />
     </Layout>
   );
 };

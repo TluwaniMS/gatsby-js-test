@@ -15,10 +15,9 @@ const Hospitals = () => {
     }
   `);
 
-  console.log(hospitalsData);
   return (
     <Layout pageTitle="Hospitals">
-      <HospitalsView />
+      <HospitalsView hospitals={hospitalsData.doctors_directory.getAllHospitals} />
     </Layout>
   );
 };

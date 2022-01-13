@@ -1,6 +1,6 @@
 import React from "react";
 
-const MunicipalitiesView = () => {
+const MunicipalitiesView = ({ municipalities }) => {
   return (
     <div>
       <h1>Municipalities View Works!!</h1>

@@ -15,10 +15,9 @@ const Municipalities = () => {
     }
   `);
 
-  console.log(municipalitiesData);
   return (
     <Layout pageTitle="Municipalities">
-      <MunicipalitiesView />
+      <MunicipalitiesView municipalities={municipalitiesData.doctors_directory.getAllMunicipalities} />
     </Layout>
   );
 };
