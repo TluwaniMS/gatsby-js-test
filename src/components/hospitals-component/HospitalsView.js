@@ -3,7 +3,7 @@ import "./HospitalsView.css";
 
 const HospitalsView = ({ hospitals }) => {
   return (
-    <div>
+    <div className="main-content-container">
       {hospitals.map((hospital) => (
         <div className="card" key={hospital.hospitalKey}>
           <h4>{hospital.hospitalName}</h4>

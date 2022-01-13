@@ -3,7 +3,7 @@ import "./MunicipalitiesView.css";
 
 const MunicipalitiesView = ({ municipalities }) => {
   return (
-    <div>
+    <div className="main-content-container">
       {municipalities.map((municipality) => (
         <div className="card" key={municipality.municipalityKey}>
           <h4>{municipality.municipalityName}</h4>
