@@ -1,10 +1,13 @@
 import React from "react";
+import "./DoctorsView.css";
 
 const DoctorsView = ({ doctors }) => {
   return (
     <div>
       {doctors.map((doctor) => (
-        <h4>{doctor.firstName}</h4>
+        <div className="card" key={doctor.id}>
+          <h4>{doctor.firstName}</h4>
+        </div>
       ))}
     </div>
   );
