@@ -3,7 +3,9 @@ import React from "react";
 const HospitalsView = ({ hospitals }) => {
   return (
     <div>
-      <h1>Hospitals View Works!!</h1>
+      {hospitals.map((hospital) => (
+        <h4>{hospital.hospitalName}</h4>
+      ))}
     </div>
   );
 };

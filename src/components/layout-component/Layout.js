@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../navbar-component/Navbar";
+import "./Layout.css";
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -7,7 +8,7 @@ const Layout = ({ pageTitle, children }) => {
       <title>{pageTitle}</title>
       <Navbar />
       <main>
-        <h1>{pageTitle}</h1>
+        <h1 className="page-title-container">{pageTitle}</h1>
         {children}
       </main>
     </div>
