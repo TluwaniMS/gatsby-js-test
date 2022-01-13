@@ -1,11 +1,19 @@
 import React from "react";
 import HospitalsView from "../components/hospitals-component/HospitalsView";
 import Layout from "../components/layout-component/Layout";
-import { useStaticQuery } from "gatsby";
-import { GET_ALL_HOSPITALS } from "../queries/hospitals.queries";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Hospitals = () => {
-  const hospitalsData = useStaticQuery(GET_ALL_HOSPITALS);
+  const hospitalsData = useStaticQuery(graphql`
+    query {
+      doctors_directory {
+        getAllHospitals {
+          hospitalName
+          hospitalKey
+        }
+      }
+    }
+  `);
 
   console.log(hospitalsData);
   return (

@@ -1,11 +1,19 @@
 import React from "react";
 import Layout from "../components/layout-component/Layout";
 import MunicipalitiesView from "../components/municipalities-component/MunicipalitiesView";
-import { useStaticQuery } from "gatsby";
-import { GET_ALL_MUNICIPALITIES } from "../queries/municipalities.queries";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Municipalities = () => {
-  const municipalitiesData = useStaticQuery(GET_ALL_MUNICIPALITIES);
+  const municipalitiesData = useStaticQuery(graphql`
+    query {
+      doctors_directory {
+        getAllMunicipalities {
+          municipalityName
+          municipalityKey
+        }
+      }
+    }
+  `);
 
   console.log(municipalitiesData);
   return (
