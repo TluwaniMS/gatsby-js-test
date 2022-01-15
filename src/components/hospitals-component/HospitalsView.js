@@ -5,7 +5,7 @@ const HospitalsView = ({ hospitals }) => {
   return (
     <div className="main-content-container">
       {hospitals.map((hospital) => (
-        <div className="card" key={hospital.hospitalKey}>
+        <div className="hospitals-card" key={hospital.hospitalKey}>
           <h4>{hospital.hospitalName}</h4>
         </div>
       ))}

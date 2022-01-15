@@ -5,8 +5,10 @@ const DoctorsView = ({ doctors }) => {
   return (
     <div className="main-content-container">
       {doctors.map((doctor) => (
-        <div className="card" key={doctor.id}>
-          <h4>{doctor.firstName}</h4>
+        <div className="doctors-card " key={doctor.id}>
+          <div className="container">
+            <h4>{doctor.firstName}</h4>
+          </div>
         </div>
       ))}
     </div>
