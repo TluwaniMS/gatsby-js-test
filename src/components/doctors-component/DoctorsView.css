@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 70px;
 }
 
 .doctors-card {
@@ -20,6 +21,7 @@
 .names-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
   padding: 14px;
 }
 
