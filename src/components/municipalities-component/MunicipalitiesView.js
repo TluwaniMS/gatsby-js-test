@@ -1,17 +1,18 @@
 import React from "react";
 import "./MunicipalitiesView.css";
 import municipalityImage from "../../images/city-hall.png";
+import { Link } from "gatsby";
 
 const MunicipalitiesView = ({ municipalities }) => {
   return (
     <div className="main-content-container">
       {municipalities.map((municipality) => (
-        <div className="card" key={municipality.municipalityKey}>
+        <Link to="/doctor" className="card" key={municipality.municipalityKey}>
           <img src={municipalityImage} className="municipality-image" alt="Avatar"></img>
           <div className="municipality-container">
             <h4>{municipality.municipalityName}</h4>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
