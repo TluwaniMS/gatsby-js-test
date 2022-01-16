@@ -7,7 +7,7 @@ const MunicipalitiesView = ({ municipalities }) => {
   return (
     <div className="main-content-container">
       {municipalities.map((municipality) => (
-        <Link to="/doctor" className="card" key={municipality.municipalityKey}>
+        <Link to="/municipality" className="card" key={municipality.municipalityKey}>
           <img src={municipalityImage} className="municipality-image" alt="Avatar"></img>
           <div className="municipality-container">
             <h4>{municipality.municipalityName}</h4>
