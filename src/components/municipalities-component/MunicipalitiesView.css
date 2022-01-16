@@ -16,6 +16,11 @@
   cursor: pointer;
 }
 
-.container {
+.municipality-container {
   padding: 2px 16px;
+}
+
+.municipality-image {
+  width: 100%;
+  height: 190px;
 }
