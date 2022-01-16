@@ -11,6 +11,7 @@ const Doctors = () => {
           id
           firstName
           lastName
+          gender
         }
       }
     }

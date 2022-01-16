@@ -17,6 +17,13 @@
   cursor: pointer;
 }
 
-.container {
-  padding: 2px 16px;
+.names-container {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.doctors-image {
+  width: 100%;
+  height: 190px;
 }
