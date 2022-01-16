@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
-.container {
+.hospitals-container {
   padding: 2px 16px;
+}
+
+.hospital-image {
+  width: 100%;
+  height: 190px;
 }
