@@ -8,7 +8,11 @@ const Hospital = (props) => {
   const hospitalId = props.params.hospitalId;
   const { loading, error, data } = useQuery(GET_HOSPITAL_BY_ID, { variables: { hospitalKey: hospitalId } });
 
-  return <Layout pageTitle="Hospital">{data && <HospitalView />}</Layout>;
+  return (
+    <Layout pageTitle="Hospital">
+      {data && <HospitalView detailedHospitalInformation={data.getHospitalByHospitalKey} />}
+    </Layout>
+  );
 };
 
 export default Hospital;

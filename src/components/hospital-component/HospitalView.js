@@ -1,7 +1,9 @@
 import React from "react";
 import "./HospitalView.css";
 
-const HospitalView = () => {
+const HospitalView = ({ detailedHospitalInformation }) => {
+  console.log(detailedHospitalInformation);
+
   return (
     <div>
       <h4>Hosptal view works!!</h4>

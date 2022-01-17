@@ -8,7 +8,7 @@ const Doctor = (props) => {
   const doctorsId = props.params.doctorId;
   const { loading, error, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { doctorsId: parseInt(doctorsId) } });
 
-  return <Layout pageTitle="Doctor">{data && <DoctorView />}</Layout>;
+  return <Layout pageTitle="Doctor">{data && <DoctorView detailedDoctorsInformation={data.getDoctorById} />}</Layout>;
 };
 
 export default Doctor;

@@ -10,7 +10,11 @@ const Municipality = (props) => {
     variables: { municipalityKey: municipalityId }
   });
 
-  return <Layout pageTitle="Hospital">{data && <MunicipalityView />}</Layout>;
+  return (
+    <Layout pageTitle="Hospital">
+      {data && <MunicipalityView detailedMunicipalityView={data.getMunicipalityByMunicipalityKey} />}
+    </Layout>
+  );
 };
 
 export default Municipality;
