@@ -8,7 +8,7 @@ const DoctorsView = ({ doctors }) => {
   return (
     <div className="main-content-container">
       {doctors.map((doctor) => (
-        <Link to="/doctor" className="doctors-card " key={doctor.id}>
+        <Link to={`/doctor/${doctor.id}`} className="doctors-card " key={doctor.id}>
           <img
             src={doctor.gender === "Female" ? femaleDoctorImage : maleDoctorImage}
             className="doctors-image"

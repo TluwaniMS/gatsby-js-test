@@ -7,7 +7,7 @@ const HospitalsView = ({ hospitals }) => {
   return (
     <div className="main-content-container">
       {hospitals.map((hospital) => (
-        <Link to="/hospital" className="hospitals-card" key={hospital.hospitalKey}>
+        <Link to={`/hospital/${hospital.hospitalKey}`} className="hospitals-card" key={hospital.hospitalKey}>
           <img src={hospitalImage} className="hospital-image" alt="Avatar"></img>
           <div className="hospitals-container">
             <h4>{hospital.hospitalName}</h4>
