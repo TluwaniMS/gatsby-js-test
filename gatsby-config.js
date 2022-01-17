@@ -5,10 +5,8 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-graphql",
+      resolve: "gatsby-plugin-apollo",
       options: {
-        typeName: "DOCTORS_DIRECTORY",
-        fieldName: "doctors_directory",
         url: "http://localhost:5000/graphql"
       }
     }
