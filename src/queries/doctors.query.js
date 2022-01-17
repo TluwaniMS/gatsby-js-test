@@ -19,6 +19,10 @@ export const GET_DOCTOR_BY_ID = gql`
       gender
       email
       hospital
+      info {
+        specialty
+        hospital
+      }
     }
   }
 `;

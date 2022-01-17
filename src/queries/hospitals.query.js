@@ -15,6 +15,12 @@ export const GET_HOSPITAL_BY_ID = gql`
       hospitalName
       hospitalKey
       municipality
+      doctors {
+        firstName
+        lastName
+        gender
+        email
+      }
     }
   }
 `;
