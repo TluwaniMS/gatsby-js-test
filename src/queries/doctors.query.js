@@ -6,6 +6,7 @@ export const GET_ALL_DOCTORS = gql`
       id
       firstName
       lastName
+      gender
     }
   }
 `;

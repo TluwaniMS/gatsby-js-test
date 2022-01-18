@@ -1,8 +1,9 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
+import { GET_MUNICIPALITY_BY_ID } from "../../queries/municipalities.query";
 import Layout from "../../components/layout-component/Layout";
 import MunicipalityView from "../../components/municipality-component/MunicipalityView";
-import { GET_MUNICIPALITY_BY_ID } from "../../queries/municipalities.query";
+import SpinnerView from "../../components/spinner-component/SpinnerView";
 
 const Municipality = (props) => {
   const municipalityId = props.params.municipalityId;
@@ -12,6 +13,7 @@ const Municipality = (props) => {
 
   return (
     <Layout pageTitle="Hospital">
+      {loading && <SpinnerView />}
       {data && <MunicipalityView detailedMunicipalityView={data.getMunicipalityByMunicipalityKey} />}
     </Layout>
   );
