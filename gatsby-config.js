@@ -9,6 +9,9 @@ module.exports = {
       options: {
         url: "http://localhost:5000/graphql"
       }
+    },
+    {
+      resolve: `gatsby-plugin-fontawesome-css`
     }
   ]
 };
