@@ -16,6 +16,7 @@ export const GET_MUNICIPALITY_BY_ID = gql`
       municipalityKey
       hospitals {
         hospitalName
+        hospitalKey
       }
     }
   }
