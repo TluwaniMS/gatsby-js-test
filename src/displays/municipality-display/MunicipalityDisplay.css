@@ -1,0 +1,10 @@
+.municipality-container {
+  color: black;
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.municipality-image {
+  width: 100%;
+  height: 190px;
+}
