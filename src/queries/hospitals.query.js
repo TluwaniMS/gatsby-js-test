@@ -16,6 +16,7 @@ export const GET_HOSPITAL_BY_ID = gql`
       hospitalKey
       municipality
       doctors {
+        id
         firstName
         lastName
         gender
