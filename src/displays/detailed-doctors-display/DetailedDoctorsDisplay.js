@@ -2,8 +2,13 @@ import React from "react";
 import "./DetailedDoctorsDisplay.css";
 import femaleDoctorImage from "../../images/female-doctor.jpg";
 import maleDoctorImage from "../../images/2716211571598811054-128.png";
+import { Hospitals } from "../../display-support/hospital-data";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
+  const hospitalName = Hospitals.filter((hospital) => hospital.hospitalKey === detailedDoctorsInformation.hospital).map(
+    (hospital) => hospital.hospitalName
+  )[0];
+
   return (
     <div className="detailed-doctor-card">
       <img
@@ -18,6 +23,8 @@ const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
         <div className="information">{detailedDoctorsInformation.email}</div>
         <div className="information-label">gender:</div>
         <div className="information">{detailedDoctorsInformation.gender}</div>
+        <div className="information-label">hospital:</div>
+        <div className="information">{hospitalName}</div>
       </div>
     </div>
   );
