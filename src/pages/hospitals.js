@@ -4,6 +4,7 @@ import { GET_ALL_HOSPITALS } from "../queries/hospitals.query";
 import HospitalsView from "../components/hospitals-component/HospitalsView";
 import Layout from "../components/layout-component/Layout";
 import SpinnerView from "../components/spinner-component/SpinnerView";
+import ErrorView from "../components/error-component/ErrorView";
 
 const Hospitals = () => {
   const { loading, error, data } = useQuery(GET_ALL_HOSPITALS);
@@ -12,6 +13,7 @@ const Hospitals = () => {
     <Layout pageTitle="Hospitals">
       {loading && <SpinnerView />}
       {data && <HospitalsView hospitals={data.getAllHospitals} />}
+      {error && <ErrorView />}
     </Layout>
   );
 };

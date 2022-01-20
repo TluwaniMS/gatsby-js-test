@@ -4,6 +4,7 @@ import { GET_DOCTOR_BY_ID } from "../../queries/doctors.query";
 import Layout from "../../components/layout-component/Layout";
 import DoctorView from "../../components/doctor-component/DoctorView";
 import SpinnerView from "../../components/spinner-component/SpinnerView";
+import ErrorView from "../../components/error-component/ErrorView";
 
 const Doctor = (props) => {
   const doctorsId = props.params.doctorId;
@@ -13,6 +14,7 @@ const Doctor = (props) => {
     <Layout pageTitle="Doctor">
       {loading && <SpinnerView />}
       {data && <DoctorView detailedDoctorsInformation={data.getDoctorById} />}
+      {error && <ErrorView />}
     </Layout>
   );
 };

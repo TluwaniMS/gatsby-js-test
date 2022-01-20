@@ -4,6 +4,7 @@ import { GET_HOSPITAL_BY_ID } from "../../queries/hospitals.query";
 import Layout from "../../components/layout-component/Layout";
 import HospitalView from "../../components/hospital-component/HospitalView";
 import SpinnerView from "../../components/spinner-component/SpinnerView";
+import ErrorView from "../../components/error-component/ErrorView";
 
 const Hospital = (props) => {
   const hospitalId = props.params.hospitalId;
@@ -13,6 +14,7 @@ const Hospital = (props) => {
     <Layout pageTitle="Hospital">
       {loading && <SpinnerView />}
       {data && <HospitalView detailedHospitalInformation={data.getHospitalByHospitalKey} />}
+      {error && <ErrorView />}
     </Layout>
   );
 };
