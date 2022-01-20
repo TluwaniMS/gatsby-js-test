@@ -3,6 +3,7 @@ import "./HospitalView.css";
 import DetailedHospitalDisplay from "../../displays/detailed-hospital-hospital/DetailedHospitalDisplay";
 import DoctorsDisplay from "../../displays/doctors-display/DoctorsDisplay";
 import NoContentView from "../no-content-component/NoContentView";
+import { DataType } from "../../display-support/data-type";
 
 const HospitalView = ({ detailedHospitalInformation }) => {
   return (
@@ -17,7 +18,7 @@ const HospitalView = ({ detailedHospitalInformation }) => {
               <DoctorsDisplay doctor={doctor} />
             </div>
           ))}
-        {detailedHospitalInformation.doctors.length === 0 && <NoContentView />}
+        {detailedHospitalInformation.doctors.length === 0 && <NoContentView dataType={DataType.Doctors} />}
       </div>
     </div>
   );

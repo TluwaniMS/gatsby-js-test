@@ -2,6 +2,7 @@ import React from "react";
 import "./DoctorsView.css";
 import DoctorsDisplay from "../../displays/doctors-display/DoctorsDisplay";
 import NoContentView from "../no-content-component/NoContentView";
+import { DataType } from "../../display-support/data-type";
 
 const DoctorsView = ({ doctors }) => {
   return (
@@ -12,7 +13,7 @@ const DoctorsView = ({ doctors }) => {
             <DoctorsDisplay doctor={doctor} />
           </div>
         ))}
-      {doctors.length === 0 && <NoContentView />}
+      {doctors.length === 0 && <NoContentView dataType={DataType.Doctors} />}
     </div>
   );
 };
