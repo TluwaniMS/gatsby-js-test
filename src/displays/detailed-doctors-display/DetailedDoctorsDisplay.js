@@ -3,6 +3,8 @@ import "./DetailedDoctorsDisplay.css";
 import femaleDoctorImage from "../../images/female-doctor.jpg";
 import maleDoctorImage from "../../images/2716211571598811054-128.png";
 import { Hospitals } from "../../display-support/hospital-data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
   const hospitalName = Hospitals.filter((hospital) => hospital.hospitalKey === detailedDoctorsInformation.hospital).map(
@@ -25,6 +27,10 @@ const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
         <div className="information">{detailedDoctorsInformation.gender}</div>
         <div className="information-label">hospital:</div>
         <div className="information">{hospitalName}</div>
+
+        <div className="delete-button-container">
+          <FontAwesomeIcon icon={faTrashAlt} />
+        </div>
       </div>
     </div>
   );

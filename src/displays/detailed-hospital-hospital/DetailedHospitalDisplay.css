@@ -3,10 +3,6 @@
   transition: 0.3s;
 }
 
-.detailed-hospital-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 .detailed-information-container {
   color: black;
   display: flex;
@@ -29,4 +25,17 @@
 .information {
   color: gray;
   font-weight: bold;
+}
+
+.delete-button-container {
+  padding: 8px;
+  border-radius: 6px;
+  background-color: #cc1b1d;
+  transition-duration: 0.4s;
+}
+
+.delete-button-container:hover {
+  background-color: #f2494c;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }

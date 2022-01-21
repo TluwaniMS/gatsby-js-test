@@ -2,6 +2,8 @@ import React from "react";
 import "./DetailedHospitalDisplay.css";
 import hospitalImage from "../../images/kindpng_2646334.png";
 import { Municipalities } from "../../display-support/municipality-data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
   const municipalityName = Municipalities.filter(
@@ -15,6 +17,9 @@ const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
         <div className="information-label">{detailedHospitalInformation.hospitalName}</div>
         <div className="information-label">municipality:</div>
         <div className="information">{municipalityName}</div>
+        <div className="delete-button-container">
+          <FontAwesomeIcon icon={faTrashAlt} />
+        </div>
       </div>
     </div>
   );
