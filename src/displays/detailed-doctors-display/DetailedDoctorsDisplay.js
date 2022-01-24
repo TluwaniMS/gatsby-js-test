@@ -6,13 +6,21 @@ import { Hospitals } from "../../display-support/hospital-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { navigate } from "@reach/router";
+import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
+import { useMutation } from "@apollo/client";
+import { GET_ALL_DOCTORS } from "../../queries/doctors.query";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
+  const [deleteDoctorById, { data, loading, error }] = useMutation(DELETE_DOCTOR_BY_ID, {
+    refetchQueries: [GET_ALL_DOCTORS]
+  });
+
   const hospitalName = Hospitals.filter((hospital) => hospital.hospitalKey === detailedDoctorsInformation.hospital).map(
     (hospital) => hospital.hospitalName
   )[0];
 
   const deleteDoctor = (doctorId) => {
+    deleteDoctorById({ variables: { doctorsId: parseInt(doctorId) } });
     navigate("/doctors", { replace: true });
   };
 
