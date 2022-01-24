@@ -5,11 +5,16 @@ import maleDoctorImage from "../../images/2716211571598811054-128.png";
 import { Hospitals } from "../../display-support/hospital-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { navigate } from "@reach/router";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
   const hospitalName = Hospitals.filter((hospital) => hospital.hospitalKey === detailedDoctorsInformation.hospital).map(
     (hospital) => hospital.hospitalName
   )[0];
+
+  const deleteDoctor = (doctorId) => {
+    navigate("/doctors", { replace: true });
+  };
 
   return (
     <div className="detailed-doctor-card">
@@ -28,7 +33,12 @@ const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
         <div className="information-label">hospital:</div>
         <div className="information">{hospitalName}</div>
 
-        <div className="delete-button-container">
+        <div
+          className="delete-button-container"
+          onClick={() => {
+            deleteDoctor(detailedDoctorsInformation.id);
+          }}
+        >
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
       </div>
