@@ -4,5 +4,6 @@ export const DataType = {
   Doctors: "Doctors",
   Doctor: "Doctor",
   Hospital: "Hospital",
-  Municipality: "Municipality"
+  Municipality: "Municipality",
+  Home: "Home"
 };

@@ -3,7 +3,7 @@ import "./Layout.css";
 import { DataType } from "../../display-support/data-type";
 import { ApolloProvider } from "@apollo/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserMd, faHospitalAlt, faHospital } from "@fortawesome/free-solid-svg-icons";
+import { faUserMd, faHospitalAlt, faHospital, faHospitalUser } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../navbar-component/Navbar";
 import Footer from "../footer-component/Footer";
 
@@ -11,6 +11,7 @@ const Layout = ({ pageTitle, children }) => {
   const DoctorsView = pageTitle === DataType.Doctors || pageTitle === DataType.Doctor;
   const HospitalsView = pageTitle === DataType.Hospitals || pageTitle === DataType.Hospital;
   const MunicipalitiesView = pageTitle === DataType.Municipalities || pageTitle === DataType.Municipality;
+  const HomeView = pageTitle === DataType.Home;
 
   return (
     <ApolloProvider>
@@ -31,6 +32,11 @@ const Layout = ({ pageTitle, children }) => {
           {MunicipalitiesView && (
             <div className="view-icon">
               <FontAwesomeIcon icon={faHospitalAlt} />
+            </div>
+          )}
+          {HomeView && (
+            <div className="view-icon">
+              <FontAwesomeIcon icon={faHospitalUser} />
             </div>
           )}
           <h1 className="page-title-container">{pageTitle}</h1>
