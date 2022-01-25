@@ -1,8 +1,8 @@
 import React from "react";
 import "./MunicipalitiesView.css";
+import { DataType } from "../../display-support/data-type";
 import MunicipalityDisplay from "../../displays/municipality-display/MunicipalityDisplay";
 import NoContentView from "../no-content-component/NoContentView";
-import { DataType } from "../../display-support/data-type";
 
 const MunicipalitiesView = ({ municipalities }) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../navbar-component/Navbar";
-import Footer from "../footer-component/Footer";
 import "./Layout.css";
 import { ApolloProvider } from "@apollo/client";
+import Navbar from "../navbar-component/Navbar";
+import Footer from "../footer-component/Footer";
 
 const Layout = ({ pageTitle, children }) => {
   return (

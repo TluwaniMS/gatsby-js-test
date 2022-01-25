@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import "./Navbar.css";
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserMd, faHospitalAlt, faHospital } from "@fortawesome/free-solid-svg-icons";
 

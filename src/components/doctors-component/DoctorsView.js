@@ -1,8 +1,8 @@
 import React from "react";
 import "./DoctorsView.css";
+import { DataType } from "../../display-support/data-type";
 import DoctorsDisplay from "../../displays/doctors-display/DoctorsDisplay";
 import NoContentView from "../no-content-component/NoContentView";
-import { DataType } from "../../display-support/data-type";
 
 const DoctorsView = ({ doctors }) => {
   return (

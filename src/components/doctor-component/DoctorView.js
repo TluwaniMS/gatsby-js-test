@@ -3,8 +3,6 @@ import "./DoctorView.css";
 import DetailedDoctorsDisplay from "../../displays/detailed-doctors-display/DetailedDoctorsDisplay";
 
 const DoctorView = ({ detailedDoctorsInformation }) => {
-  console.log(detailedDoctorsInformation);
-
   return (
     <div className="main-detailed-doctor-information-container">
       <DetailedDoctorsDisplay detailedDoctorsInformation={detailedDoctorsInformation} />

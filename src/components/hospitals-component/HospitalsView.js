@@ -1,8 +1,8 @@
 import React from "react";
 import "./HospitalsView.css";
+import { DataType } from "../../display-support/data-type";
 import HospitalDisplay from "../../displays/hospital-display/HospitalDisplay";
 import NoContentView from "../no-content-component/NoContentView";
-import { DataType } from "../../display-support/data-type";
 
 const HospitalsView = ({ hospitals }) => {
   return (

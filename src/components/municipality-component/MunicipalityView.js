@@ -1,9 +1,9 @@
 import React from "react";
 import "./MunicipalityView.css";
+import { DataType } from "../../display-support/data-type";
 import DetailedMunicipalityDisplay from "../../displays/detailed-municipality-display/DetailedMunicipalityDisplay";
 import HospitalDisplay from "../../displays/hospital-display/HospitalDisplay";
 import NoContentView from "../no-content-component/NoContentView";
-import { DataType } from "../../display-support/data-type";
 
 const MunicipalityView = ({ detailedMunicipalityView }) => {
   console.log(detailedMunicipalityView);
