@@ -4,9 +4,17 @@ import municipalityImage from "../../images/city-hall.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { navigate } from "@reach/router";
+import { useMutation } from "@apollo/client";
+import { DELETE_MUNICIPALITY_BY_ID } from "../../mutations/municipalities.mutation";
+import { GET_ALL_MUNICIPALITIES } from "../../queries/municipalities.query";
 
 const DetailedMunicipalityDisplay = ({ detailedMunicipalityView }) => {
+  const [deleteMunicipalityByMunicipalKey, { data, loading, error }] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
+    refetchQueries: [GET_ALL_MUNICIPALITIES]
+  });
+
   const deleteMunicipality = (municipalityId) => {
+    deleteMunicipalityByMunicipalKey({ variables: { municipalityKey: municipalityId } });
     navigate("/municipalities", { replace: true });
   };
 
