@@ -9,7 +9,7 @@ import { GET_ALL_MUNICIPALITIES } from "../../queries/municipalities.query";
 import municipalityImage from "../../images/city-hall.png";
 
 const DetailedMunicipalityDisplay = ({ detailedMunicipalityView }) => {
-  const [deleteMunicipalityByMunicipalKey, { data, loading, error }] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
+  const [deleteMunicipalityByMunicipalKey] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
     refetchQueries: [GET_ALL_MUNICIPALITIES]
   });
 

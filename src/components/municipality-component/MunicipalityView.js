@@ -6,7 +6,6 @@ import HospitalDisplay from "../../displays/hospital-display/HospitalDisplay";
 import NoContentView from "../no-content-component/NoContentView";
 
 const MunicipalityView = ({ detailedMunicipalityView }) => {
-  console.log(detailedMunicipalityView);
 
   return (
     <div className="main-detailed-municipality-information-container">

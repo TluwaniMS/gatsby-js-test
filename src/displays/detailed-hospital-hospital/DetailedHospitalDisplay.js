@@ -10,7 +10,7 @@ import { DELETE_HOSPITAL_BY_ID } from "../../mutations/hospitals.mutation";
 import hospitalImage from "../../images/kindpng_2646334.png";
 
 const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
-  const [deleteHospitalById, { data, loading, error }] = useMutation(DELETE_HOSPITAL_BY_ID, {
+  const [deleteHospitalById] = useMutation(DELETE_HOSPITAL_BY_ID, {
     refetchQueries: [GET_ALL_HOSPITALS]
   });
 

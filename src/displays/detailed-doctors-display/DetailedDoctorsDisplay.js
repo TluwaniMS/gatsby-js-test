@@ -11,7 +11,7 @@ import femaleDoctorImage from "../../images/female-doctor.jpg";
 import maleDoctorImage from "../../images/2716211571598811054-128.png";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
-  const [deleteDoctorById, { data, loading, error }] = useMutation(DELETE_DOCTOR_BY_ID, {
+  const [deleteDoctorById] = useMutation(DELETE_DOCTOR_BY_ID, {
     refetchQueries: [GET_ALL_DOCTORS]
   });
 
