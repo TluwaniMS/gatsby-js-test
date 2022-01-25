@@ -1,1 +1,1 @@
-export const DataType = { Hospitals: "hospitals", Municipalities: "municipalities", Doctors: "doctors" };
+export const DataType = { Hospitals: "Hospitals", Municipalities: "Municipalities", Doctors: "Doctors" };
