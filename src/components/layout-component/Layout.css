@@ -1,3 +1,9 @@
 .page-title-container {
   text-align: center;
 }
+
+.view-icon {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 50px;
+}
