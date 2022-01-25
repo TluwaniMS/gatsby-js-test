@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import "./DoctorsDisplay.css";
+import { Link } from "gatsby";
 import femaleDoctorImage from "../../images/female-doctor.jpg";
 import maleDoctorImage from "../../images/2716211571598811054-128.png";
 

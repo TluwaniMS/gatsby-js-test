@@ -1,13 +1,13 @@
 import React from "react";
 import "./DetailedHospitalDisplay.css";
-import hospitalImage from "../../images/kindpng_2646334.png";
-import { Municipalities } from "../../display-support/municipality-data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { useMutation } from "@apollo/client";
 import { navigate } from "@reach/router";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Municipalities } from "../../display-support/municipality-data";
 import { GET_ALL_HOSPITALS } from "../../queries/hospitals.query";
 import { DELETE_HOSPITAL_BY_ID } from "../../mutations/hospitals.mutation";
-import { useMutation } from "@apollo/client";
+import hospitalImage from "../../images/kindpng_2646334.png";
 
 const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
   const [deleteHospitalById, { data, loading, error }] = useMutation(DELETE_HOSPITAL_BY_ID, {

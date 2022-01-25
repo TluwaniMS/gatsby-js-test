@@ -1,14 +1,14 @@
 import React from "react";
 import "./DetailedDoctorsDisplay.css";
+import { useMutation } from "@apollo/client";
+import { navigate } from "@reach/router";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Hospitals } from "../../display-support/hospital-data";
+import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
+import { GET_ALL_DOCTORS } from "../../queries/doctors.query";
 import femaleDoctorImage from "../../images/female-doctor.jpg";
 import maleDoctorImage from "../../images/2716211571598811054-128.png";
-import { Hospitals } from "../../display-support/hospital-data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import { navigate } from "@reach/router";
-import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
-import { useMutation } from "@apollo/client";
-import { GET_ALL_DOCTORS } from "../../queries/doctors.query";
 
 const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
   const [deleteDoctorById, { data, loading, error }] = useMutation(DELETE_DOCTOR_BY_ID, {

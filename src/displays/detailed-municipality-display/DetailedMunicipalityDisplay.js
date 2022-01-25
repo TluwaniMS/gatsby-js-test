@@ -1,12 +1,12 @@
 import React from "react";
 import "./DetailedMunicipalityDisplay.css";
-import municipalityImage from "../../images/city-hall.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { navigate } from "@reach/router";
 import { useMutation } from "@apollo/client";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DELETE_MUNICIPALITY_BY_ID } from "../../mutations/municipalities.mutation";
 import { GET_ALL_MUNICIPALITIES } from "../../queries/municipalities.query";
+import municipalityImage from "../../images/city-hall.png";
 
 const DetailedMunicipalityDisplay = ({ detailedMunicipalityView }) => {
   const [deleteMunicipalityByMunicipalKey, { data, loading, error }] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
