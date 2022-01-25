@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
+import { DataType } from "../../display-support/data-type";
 import { GET_DOCTOR_BY_ID } from "../../queries/doctors.query";
 import Layout from "../../components/layout-component/Layout";
 import DoctorView from "../../components/doctor-component/DoctorView";
@@ -11,7 +12,7 @@ const Doctor = (props) => {
   const { loading, error, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { doctorsId: parseInt(doctorsId) } });
 
   return (
-    <Layout pageTitle="Doctor">
+    <Layout pageTitle={DataType.Doctor}>
       {loading && <SpinnerView />}
       {data && <DoctorView detailedDoctorsInformation={data.getDoctorById} />}
       {error && <ErrorView />}

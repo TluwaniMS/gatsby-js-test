@@ -1,4 +1,5 @@
 import React from "react";
+import { DataType } from "../../display-support/data-type";
 import { useQuery } from "@apollo/client";
 import { GET_HOSPITAL_BY_ID } from "../../queries/hospitals.query";
 import Layout from "../../components/layout-component/Layout";
@@ -11,7 +12,7 @@ const Hospital = (props) => {
   const { loading, error, data } = useQuery(GET_HOSPITAL_BY_ID, { variables: { hospitalKey: hospitalId } });
 
   return (
-    <Layout pageTitle="Hospital">
+    <Layout pageTitle={DataType.Hospital}>
       {loading && <SpinnerView />}
       {data && <HospitalView detailedHospitalInformation={data.getHospitalByHospitalKey} />}
       {error && <ErrorView />}
