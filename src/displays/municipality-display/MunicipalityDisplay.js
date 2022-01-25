@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import "./MunicipalityDisplay.css";
+import { Link } from "gatsby";
 import municipalityImage from "../../images/city-hall.png";
 
 const MunicipalityDisplay = ({ municipality }) => {
