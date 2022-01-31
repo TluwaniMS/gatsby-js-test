@@ -19,7 +19,7 @@ const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
   ).map((municipality) => municipality.municipalityName)[0];
 
   const deleteHospital = (hospitalId) => {
-    deleteHospitalById({ variables: { hospitalKey: hospitalId } });
+    deleteHospitalById({ variables: { _id: hospitalId } });
     navigate("/hospitals", { replace: true });
   };
 
@@ -33,7 +33,7 @@ const DetailedHospitalDisplay = ({ detailedHospitalInformation }) => {
         <div
           className="delete-button-container"
           onClick={() => {
-            deleteHospital(detailedHospitalInformation.hospitalKey);
+            deleteHospital(detailedHospitalInformation._id);
           }}
         >
           <FontAwesomeIcon icon={faTrashAlt} />

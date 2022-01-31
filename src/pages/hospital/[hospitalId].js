@@ -9,12 +9,12 @@ import ErrorView from "../../components/error-component/ErrorView";
 
 const Hospital = (props) => {
   const hospitalId = props.params.hospitalId;
-  const { loading, error, data } = useQuery(GET_HOSPITAL_BY_ID, { variables: { hospitalKey: hospitalId } });
+  const { loading, error, data } = useQuery(GET_HOSPITAL_BY_ID, { variables: { _id: hospitalId } });
 
   return (
     <Layout pageTitle={DataType.Hospital}>
       {loading && <SpinnerView />}
-      {data && <HospitalView detailedHospitalInformation={data.getHospitalByHospitalKey} />}
+      {data && <HospitalView detailedHospitalInformation={data.getHospitalByHospitalById} />}
       {error && <ErrorView />}
     </Layout>
   );

@@ -14,7 +14,7 @@ const DetailedMunicipalityDisplay = ({ detailedMunicipalityView }) => {
   });
 
   const deleteMunicipality = (municipalityId) => {
-    deleteMunicipalityByMunicipalKey({ variables: { municipalityKey: municipalityId } });
+    deleteMunicipalityByMunicipalKey({ variables: { _id: municipalityId } });
     navigate("/municipalities", { replace: true });
   };
 
@@ -23,10 +23,7 @@ const DetailedMunicipalityDisplay = ({ detailedMunicipalityView }) => {
       <img src={municipalityImage} className="municipality-image" alt="Avatar"></img>
       <div className="municipality-information-container">
         <h4>{detailedMunicipalityView.municipalityName}</h4>
-        <div
-          className="delete-button-container"
-          onClick={() => deleteMunicipality(detailedMunicipalityView.municipalityKey)}
-        >
+        <div className="delete-button-container" onClick={() => deleteMunicipality(detailedMunicipalityView._id)}>
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
       </div>

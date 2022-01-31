@@ -9,7 +9,7 @@ const MunicipalitiesView = ({ municipalities }) => {
     <div className="main-content-container">
       {municipalities.length > 0 &&
         municipalities.map((municipality) => (
-          <div className="card" key={municipality.municipalityKey}>
+          <div className="card" key={municipality._id}>
             <MunicipalityDisplay municipality={municipality} />
           </div>
         ))}

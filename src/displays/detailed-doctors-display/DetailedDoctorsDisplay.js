@@ -20,7 +20,7 @@ const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
   )[0];
 
   const deleteDoctor = (doctorId) => {
-    deleteDoctorById({ variables: { doctorsId: parseInt(doctorId) } });
+    deleteDoctorById({ variables: { _id: doctorId } });
     navigate("/doctors", { replace: true });
   };
 
@@ -44,7 +44,7 @@ const DetailedDoctorsDisplay = ({ detailedDoctorsInformation }) => {
         <div
           className="delete-button-container"
           onClick={() => {
-            deleteDoctor(detailedDoctorsInformation.id);
+            deleteDoctor(detailedDoctorsInformation._id);
           }}
         >
           <FontAwesomeIcon icon={faTrashAlt} />

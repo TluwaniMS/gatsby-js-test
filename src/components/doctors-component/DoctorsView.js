@@ -9,7 +9,7 @@ const DoctorsView = ({ doctors }) => {
     <div className="main-content-container">
       {doctors.length > 0 &&
         doctors.map((doctor) => (
-          <div className="doctors-card" key={doctor.id}>
+          <div className="doctors-card" key={doctor._id}>
             <DoctorsDisplay doctor={doctor} />
           </div>
         ))}

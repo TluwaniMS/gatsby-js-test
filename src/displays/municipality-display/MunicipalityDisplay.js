@@ -5,7 +5,7 @@ import municipalityImage from "../../images/city-hall.png";
 
 const MunicipalityDisplay = ({ municipality }) => {
   return (
-    <Link to={`/municipality/${municipality.municipalityKey}`}>
+    <Link to={`/municipality/${municipality._id}`}>
       <img src={municipalityImage} className="municipality-image" alt="Avatar"></img>
       <div className="municipality-container">
         <h4>{municipality.municipalityName}</h4>

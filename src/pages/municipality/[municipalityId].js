@@ -10,13 +10,13 @@ import ErrorView from "../../components/error-component/ErrorView";
 const Municipality = (props) => {
   const municipalityId = props.params.municipalityId;
   const { loading, error, data } = useQuery(GET_MUNICIPALITY_BY_ID, {
-    variables: { municipalityKey: municipalityId }
+    variables: { _id: municipalityId }
   });
 
   return (
     <Layout pageTitle={DataType.Municipality}>
       {loading && <SpinnerView />}
-      {data && <MunicipalityView detailedMunicipalityView={data.getMunicipalityByMunicipalityKey} />}
+      {data && <MunicipalityView detailedMunicipalityView={data.getMunicipalityByMunicipalityId} />}
       {error && <ErrorView />}
     </Layout>
   );

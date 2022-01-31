@@ -6,7 +6,7 @@ import maleDoctorImage from "../../images/2716211571598811054-128.png";
 
 const DoctorsDisplay = ({ doctor }) => {
   return (
-    <Link to={`/doctor/${doctor.id}`}>
+    <Link to={`/doctor/${doctor._id}`}>
       <img
         src={doctor.gender === "Female" ? femaleDoctorImage : maleDoctorImage}
         className="doctors-image"

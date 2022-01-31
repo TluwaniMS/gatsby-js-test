@@ -9,7 +9,7 @@ import ErrorView from "../../components/error-component/ErrorView";
 
 const Doctor = (props) => {
   const doctorsId = props.params.doctorId;
-  const { loading, error, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { doctorsId: parseInt(doctorsId) } });
+  const { loading, error, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { _id: doctorsId } });
 
   return (
     <Layout pageTitle={DataType.Doctor}>
