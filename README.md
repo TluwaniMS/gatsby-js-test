@@ -9,6 +9,14 @@
 
 ## 🚀 Quick start
 
+# Dependencies:
+* APOLLO CLIENT
+* REACT-FONT-AWESOME
+* REACH-ROUTER
+* GATSBY-PLUGIN-APOLLO
+* GATSBY-PLUGIN-FONT-AWESOME-CSS
+* GRAPHQL
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the minimal starter.
