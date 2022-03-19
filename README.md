@@ -9,6 +9,9 @@
 
 ## 🚀 Quick start
 
+# About Repository:
+This is a basic gatsby-js project that I created to learn the basic concepts of gatsby-js
+
 # Dependencies:
 * APOLLO CLIENT
 * REACT-FONT-AWESOME
