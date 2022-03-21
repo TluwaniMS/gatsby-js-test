@@ -12,6 +12,9 @@
 # About Repository:
 This is a basic gatsby-js project that I created to learn the basic concepts of gatsby-js
 
+# Software(s) required:
+* Latest stable version of Node Package Manager
+
 # Dependencies:
 * APOLLO CLIENT
 * REACT-FONT-AWESOME
