@@ -15,6 +15,12 @@ This is a basic gatsby-js project that I created to learn the basic concepts of 
 # Software(s) required:
 * Latest stable version of Node Package Manager
 
+# Project Setup:
+
+* Step 1:
+
+Switch to the projects root directory and run "npm install" to install the rquired packages.
+
 # Dependencies:
 * APOLLO CLIENT
 * REACT-FONT-AWESOME
